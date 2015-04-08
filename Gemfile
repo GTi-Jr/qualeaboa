@@ -46,6 +46,8 @@ gem 'tzinfo-data'
 
 gem 'newrelic_rpm'
 
+gem 'rack-google-analytics'
+
 platforms :ruby do # linux
   gem 'unicorn'
 end
