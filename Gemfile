@@ -46,6 +46,10 @@ gem 'tzinfo-data'
 
 gem 'newrelic_rpm'
 
+platforms :ruby do # linux
+  gem 'unicorn'
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
