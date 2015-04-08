@@ -38,7 +38,7 @@ class PanelsController < ApplicationController
       if @panel.save
         format.html { redirect_to :back, notice: 'Sucesso =)' }
       else
-        format.html { redirect_to :back, alert: 'É preciso de um titulo' }
+        format.html { redirect_to :back, alert: 'Esse título já existe.' }
       end
     end
   end
