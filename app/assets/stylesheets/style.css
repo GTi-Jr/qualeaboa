@@ -120,3 +120,11 @@ h1, h2, h3, h4, h5, h6 {
 .btn-floating i {
   font-size: 1.2rem;
 }
+
+.divisor_tabs {
+  position:absolute;
+  height: 48px;
+  width: 2px;
+  bottom:0;
+  background-color:#f6b2b5;
+}
