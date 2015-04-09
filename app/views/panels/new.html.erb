@@ -1,5 +1,5 @@
 <section>
-    <div class="card-content white-text">
+    <div class="card-content white-text tooltipped" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Bem vindo ao Qual é a Boa?">
       <span class="card-title" style="font-family: 'Pacifico'; font-size: 60px; margin-bottom: 10px">Qual é a boa?</span>
     </div>
 	<div id="newsletter" class="visible">
@@ -10,8 +10,8 @@
 						  <div class="row">
 						    <div class="col s12">
 						      <ul class="tabs">
-						        <li class="tab col s3"><a class="active" href="#test1">Votar</a></li>
-						        <li class="tab col s3"><a  href="#test2">Contribuir</a></li>
+						        <li class="tab col s3"><a class="active" href="#test1">Votação</a></li>
+						        <li class="tab col s3"><a  href="#test2">Adicionar Palestra ou Tema</a></li>
 						      </ul>
 						    </div>
 						    <div id="test1" class="col s12">
@@ -20,15 +20,15 @@
 								    <div class="col s12">
 								        <div class="col s6">
 								        	<div class="card" style="background-color:#26757F">
-								            <div class="card-content white-text">
-								              Por Temas
+								            <div class="card-content white-text" style="font-size: 20px">
+								              Temas
 								            </div>													  
 								          </div>
 								          <ul class="collapsible popout" data-collapsible="accordion">
 								          	<% @panels.each do |p| %>
 								          		<% if p.actor == "tema" %>
 														    <li>
-														      <div class="collapsible-header"><%= p.title %></div>
+														      <div class="collapsible-header" style="font-size: 18px"><%= p.title %></div>
 														      <div class="collapsible-body">
 														      	<p><%= p.description %></p> 
 
@@ -45,8 +45,8 @@
 
 								        <div class="col s6">
 								        	<div class="card" style="background-color:#26757F">
-								            <div class="card-content white-text">
-								              Por Palestrante
+								            <div class="card-content white-text" style="font-size: 20px">
+								              Palestrantes
 								            </div>
 								          </div>
 
@@ -54,7 +54,7 @@
 												    <% @panels.each do |p| %>
 								          		<% if p.actor == "palestrante" %>
 														    <li>
-														      <div class="collapsible-header"><%= p.title %></div>
+														      <div class="collapsible-header" style="font-size: 18px"><%= p.title %></div>
 														      <div class="collapsible-body">
 														      	<p><%= p.description %></p> 
 
@@ -107,11 +107,10 @@
 					<div class="col s6 offset-l3">
 				  	<div class="card white">
 				      <div class="card-content center-align">
-				        <a href="http://gti.ufc.br">GTi Jr</a> || <a href="http://eneej.com.br">Eneej</a>
+				        <a href="http://gti.ufc.br">GTi Jr</a> || <a href="http://eneej.com.br">ENEEJ</a>
 				      </div>													  
 				    </div>
 				  </div>
-					
 				</div>
 			</div>
 		</div>	
