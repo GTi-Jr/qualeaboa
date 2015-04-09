@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 .tab a:hover{color:#FFF}
 
 .tabs .indicator {
-  background-color: #0091ea;
+  background-color: #26a69a;
   height: 3px;
 }
 
@@ -126,6 +126,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 48px;
   width: 5px;
   bottom:0;
-  background-color:#0091ea;
+  background-color:#26a69a;
   will-change: right
 }
