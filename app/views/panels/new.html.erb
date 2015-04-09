@@ -10,8 +10,8 @@
 						  <div class="row">
 						    <div class="col s12">
 						      <ul class="tabs">
-						        <li class="tab col s3"><h2><a class="active" href="#test1">Votação</a></h2></li>
-						        <li class="tab col s3"><h2><a  href="#test2">Adicionar Palestra ou Tema</a></h2></li>
+						        <li class="tab col s3"><a class="active" href="#test1">Votação</a></li>
+						        <li class="tab col s3"><a  href="#test2">Adicionar Palestra ou Tema</a></li>
 						      </ul>
 						    </div>
 						    <div id="test1" class="col s12">
@@ -21,14 +21,14 @@
 								        <div class="col s6">
 								        	<div class="card" style="background-color:#26757F">
 								            <div class="card-content white-text">
-								              Temas
+								              <h5>Temas</h5>
 								            </div>													  
 								          </div>
 								          <ul class="collapsible popout" data-collapsible="accordion">
 								          	<% @panels.each do |p| %>
 								          		<% if p.actor == "tema" %>
 														    <li>
-														      <div class="collapsible-header"><h5><%= p.title %></h5></div>
+														      <div class="collapsible-header" style="font-size: 18px"><%= p.title %></div>
 														      <div class="collapsible-body">
 														      	<p><%= p.description %></p> 
 
@@ -46,7 +46,7 @@
 								        <div class="col s6">
 								        	<div class="card" style="background-color:#26757F">
 								            <div class="card-content white-text">
-								              Palestrantes
+								              <h5>Palestrantes</h5>
 								            </div>
 								          </div>
 
@@ -54,7 +54,7 @@
 												    <% @panels.each do |p| %>
 								          		<% if p.actor == "palestrante" %>
 														    <li>
-														      <div class="collapsible-header"><h5><%= p.title %></h5></div>
+														      <div class="collapsible-header" style="font-size: 18px"><%= p.title %></div>
 														      <div class="collapsible-body">
 														      	<p><%= p.description %></p> 
 
