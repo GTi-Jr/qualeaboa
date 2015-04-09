@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .tabs .indicator {
   background-color: #0091ea;
-  height: 5px;
+  height: 3px;
 }
 
 
@@ -124,7 +124,8 @@ h1, h2, h3, h4, h5, h6 {
 .divisor_tabs {
   position:absolute;
   height: 48px;
-  width: 2px;
+  width: 5px;
   bottom:0;
-  background-color:#f6b2b5;
+  background-color:#0091ea;
+  will-change: right
 }

@@ -318,6 +318,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   newrelic_rpm
+  rack-google-analytics
   rails (= 4.1.5)
   rails_12factor
   sass-rails (~> 4.0.3)
