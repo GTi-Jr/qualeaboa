@@ -10,8 +10,8 @@
 						  <div class="row">
 						    <div class="col s12">
 						      <ul class="tabs">
-						        <li class="tab col s3"><a class="active" href="#test1">Votação</a></li>
-						        <li class="tab col s3"><a  href="#test2">Adicionar Palestra ou Tema</a></li>
+						        <li class="tab col s3"><h2><a class="active" href="#test1">Votação</a></h2></li>
+						        <li class="tab col s3"><h2><a  href="#test2">Adicionar Palestra ou Tema</a></h2></li>
 						      </ul>
 						    </div>
 						    <div id="test1" class="col s12">
@@ -28,7 +28,7 @@
 								          	<% @panels.each do |p| %>
 								          		<% if p.actor == "tema" %>
 														    <li>
-														      <div class="collapsible-header"><b><%= p.title %></b></div>
+														      <div class="collapsible-header"><h4><%= p.title %></h4></div>
 														      <div class="collapsible-body">
 														      	<p><%= p.description %></p> 
 
@@ -54,7 +54,7 @@
 												    <% @panels.each do |p| %>
 								          		<% if p.actor == "palestrante" %>
 														    <li>
-														      <div class="collapsible-header"><b><%= p.title %></b></div>
+														      <div class="collapsible-header"><h3><%= p.title %></h3></div>
 														      <div class="collapsible-body">
 														      	<p><%= p.description %></p> 
 
