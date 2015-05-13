@@ -5,22 +5,20 @@
 	<div id="newsletter" class="visible">
 		<div class="container">	
 			<div class="row">
-				<div class="m12 offset-m0 s12">
-					<article class="card white" data-position="left" data-delay="50">
+				<div class="col offset-s1 s10">
+					<article class="card white">
 						  <div class="row">
 						    <div class="col s12">
 						      <ul class="tabs">
-						        <li class="tab col s3"><a class="active" href="#test1" onclick="Materialize.fadeInImage('#test1')">Votação</a></li>
-						        <li class="tab col s3"><a  href="#test2" onclick="Materialize.fadeInImage('#test2')">Adicionar Palestra ou Tema</a></li>
-						        <div class="divisor_tabs"></div>
+						        <li class="tab col s6"><a class="active" href="#test1">Votar</a></li>
+						        <li class="tab col s6"><a  href="#test2">Adicionar Palestra ou Tema</a></li>
 						      </ul>
 						    </div>
 						    <div id="test1" class="col s12">
-
 						    	<div class="row">
 								    <div class="col s12">
 								        <div class="col s6">
-								        	<div class="card" style="background-color:#26757F">
+								        	<div class="card" style="background-color:#FCAA4C">
 								            <div class="card-content white-text" style="font-size: 20px">
 								              Temas
 								            </div>													  
@@ -35,7 +33,7 @@
 
 														      	<p>Votos: <%= p.vote %></p> 
 														      		<a href="/vote/<%= p.id %>" class="btn-floating waves-effect waves-light space-bottom red" type="submit" name="action">
-																		    <i class="fa fa-heart"></i>
+																		    <i class="fa fa-heart yellow darken-3"></i>
 																			</a>
 														      </div>
 														    </li>
@@ -45,7 +43,7 @@
 								        </div>
 
 								        <div class="col s6">
-								        	<div class="card" style="background-color:#26757F">
+								        	<div class="card"  style="background-color:#FCAA4C">
 								            <div class="card-content white-text" style="font-size: 20px">
 								              Palestrantes
 								            </div>
@@ -61,7 +59,7 @@
 
 														      	<p>Votos: <%= p.vote %></p> 
 														      		<a href="/vote/<%= p.id %>" class="btn-floating waves-effect waves-light space-bottom red" type="submit" name="action">
-																		    <i class="fa fa-heart"></i>
+																		    <i class="fa fa-heart yellow darken-3"></i>
 																			</a>
 														      </div>
 														    </li>
@@ -74,7 +72,7 @@
 
 						    </div>
 						    <div id="test2" class="col s12">
-						    	<div class="col s6 offset-l3" style="margin-top:20px">
+						    	<div class="col s6 offset-l3 offset-s3" style="margin-top:20px">
 							    	<%= form_for(@panel) do |f| %>
 										  <div class="field tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nome do Palestrante ou Tema">
 										    <%= f.text_field :title, placeholder: "Nome ou Título"  %>
@@ -97,7 +95,12 @@
 									    </div>
 
 										  <div class="actions tooltipped" data-position="bottom" data-delay="50" data-tooltip="Você está certo desta resposta?">
-										    <button type="submit" class=" right btn btn-lg btn-primary btn-block" onclick="facebook_share()">Seria irado!</button>
+
+										  	<% if session[:shared] != true %>
+										    	<button type="submit" class=" right btn btn-lg btn-primary btn-block" onclick="facebook_share()">Seria irado!</button>
+										    <% else %>
+										    	<button type="submit" class=" right btn btn-lg btn-primary btn-block">Seria irado!</button>
+										    <% end %>
 
 										  </div>
 										<% end %>
@@ -105,10 +108,10 @@
 						    </div>
 						  </div>
 					</article>
-					<div class="col s6 offset-l3">
+					<div class="col s6 offset-l3 offset-s3">
 				  	<div class="card white">
 				      <div class="card-content center-align">
-				        <a href="http://gti.ufc.br">GTi Jr</a> || <a href="http://eneej.com.br">ENEEJ</a>
+				        <a style="color: #FCAA4C" href="http://gti.ufc.br">GTi Jr</a> || <a style="color: #FCAA4C" href="http://eneej.com.br">ENEEJ</a>
 				      </div>													  
 				    </div>
 				  </div>

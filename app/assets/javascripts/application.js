@@ -11,7 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require toastr
+//= require materialize
+//= require panel
 //= require turbolinks
-//= require_tree .

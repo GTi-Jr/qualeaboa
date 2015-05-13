@@ -6,8 +6,12 @@
  * Made By MaterializeCSS.com
  */
 
+ html {
+  color: #796F4F;
+}
+
 body {
-  background: #0091ea;
+  background: #F9D057;
 }
 
 h3 {
@@ -21,7 +25,7 @@ nav .brand-logo {
 
 section {
   text-align: center;
-  background: #0091ea;
+  background: #F9D057;
   top: 0;
   height: 100%;
 }
@@ -94,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .tabs {
-  background-color: #26757F;
+  background-color: #FCAA4C;
 }
 
 .tabs .tab a {
@@ -104,13 +108,13 @@ h1, h2, h3, h4, h5, h6 {
 .tab a:hover{color:#FFF}
 
 .tabs .indicator {
-  background-color: #26a69a;
-  height: 3px;
+  background-color: #F9D057;
+  height: 5px;
 }
 
 
 .tabs li.tab a:hover {
-  color: #CFD8DC;
+  color: #fff;
 }
 
 .space-bottom {

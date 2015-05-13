@@ -5,6 +5,9 @@ class PanelsController < ApplicationController
   # GET /panels.json
   def index
     @panels = Panel.all
+    unless session[:votes].blank? 
+      session[:votes] = []
+    end
   end
 
   # GET /panels/1
@@ -27,6 +30,8 @@ class PanelsController < ApplicationController
   def create
     @panel = Panel.new(panel_params)
     @panel.vote = 0
+    session[:shared] = true
+
 
     if(panel_params[:actor] == "true")
       @panel.actor = "palestrante"
@@ -46,8 +51,12 @@ class PanelsController < ApplicationController
   def voting
     @panel = Panel.find(params[:id])
 
-    @panel.vote = @panel.vote + 1
-    @panel.save
+    if !session[:votes].include? params[:id]
+      @panel.vote = @panel.vote + 1
+      @panel.save
+
+      session[:votes] << params[:id]
+    end
 
     respond_to do |format|      
       format.html { redirect_to "", notice: 'Sucesso =)' }
